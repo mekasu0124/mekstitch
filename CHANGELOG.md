@@ -26,6 +26,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   application name, window title, organisation name, project file dialog
   filter, app icon asset and repository URLs all move from "WinStitch Remake"
   to "mekstitch". The package layout (`src.app`, `src.core`) is unchanged.
+- **Simplified the app icon wiring.** `main.py` now loads the committed PNG
+  directly with `window.setWindowIcon(QPixmap(Config.APP_ICON))`, with no
+  `exists()` guard or string coercion.
+
+### Removed
+
+- `tools/make_icon.py` and the `tools/` directory. The icon generator was a
+  one-off used to mint `src/assets/mekstitch.png`; the PNG is committed, so the
+  script is dead weight.
 
 ## [1.0.0] - 2026-10-14
 
@@ -121,9 +130,7 @@ Rust application, re-housed on the `momentum` project's package conventions.
   `FluentWindow` and runs the event loop.
 - `src/config.py` — a single `Config` class (paths + metadata) every other
   module imports instead of hard-coding filesystem paths.
-- `src/assets/` — the local Fluent stylesheet (`styles.qss`) and the generated
-  app icon.
-- `tools/make_icon.py` — one-shot script that (re)generates the app icon.
+- `src/assets/` — the local Fluent stylesheet (`styles.qss`) and the app icon.
 - `pyproject.toml` — setuptools packaging with explicit `src` package discovery
   and package-data covering the stylesheet and assets.
 - `README.md`, `.gitignore`, `.vscode/extensions.json`, `.env.example`.

@@ -33,12 +33,13 @@ def main() -> int:
     app.setApplicationVersion(Config.APP_VERSION)
     app.setOrganizationName("mekstitch")
 
+    app_icon = Config.APP_ICON
+
     logic = Logic(Config.APP_DIR)
 
     window = MainWindow(logic, Config.APP_STYLES)
     window.setWindowTitle(Config.APP_NAME)
-    if Config.APP_ICON.exists():
-        window.setWindowIcon(QPixmap(str(Config.APP_ICON)))
+    window.setWindowIcon(QPixmap(app_icon))
     window.show()
 
     return app.exec()
