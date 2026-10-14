@@ -1,0 +1,49 @@
+/*
+ * mekstitch — local stylesheet.
+ *
+ * Fluent Widgets (qfluentwidgets) already styles every control it provides, so
+ * this file deliberately touches only the handful of custom, non-Fluent widgets
+ * we paint ourselves (the canvas viewport, colour swatches, readout chips and
+ * the panel wrappers). Broad `QWidget { ... }` rules are avoided on purpose:
+ * they would fight the Fluent theme and break light/dark switching.
+ */
+
+/* The scroll area that hosts the stitch canvas. */
+QScrollArea#canvasViewport {
+    border: none;
+}
+
+QWidget#canvasSurface {
+    background-color: transparent;
+}
+
+/* Right-hand editor column. */
+QWidget#editorColumn {
+    background-color: transparent;
+}
+
+/* A single palette colour chip. */
+QToolButton#swatch {
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    border-radius: 6px;
+    padding: 0px;
+}
+
+QToolButton#swatch:checked {
+    border: 2px solid #4c8dd8;
+}
+
+/* Bottom readout strip on the editor page. */
+QWidget#readout {
+    border-top: 1px solid rgba(128, 128, 128, 0.28);
+}
+
+QLabel#readoutLabel {
+    color: #86888c;
+    font-size: 12px;
+}
+
+/* Small square that previews the colour currently being painted with. */
+QLabel#colourChip {
+    border-radius: 3px;
+}

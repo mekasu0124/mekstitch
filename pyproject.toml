@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mekstitch"
+version = "1.0.0"
+description = "Cross-stitch, crochet, Tunisian and knitting chart designer"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "mekasu0124", email = "mek0124@proton.me" }]
+license = "MIT"
+dependencies = [
+    "pyside6>=6.10.2",
+    "pyside6-fluent-widgets[full]>=1.11.3",
+    "python-dotenv>=1.2.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/mekasu0124/mekstitch"
+Repository = "https://github.com/mekasu0124/mekstitch.git"
+Documentation = "https://github.com/mekasu0124/mekstitch"
+
+[project.scripts]
+mekstitch = "src.main:main"
+
+# The code lives under `src/`, and the importable package is `src` itself
+# (containing `src.app` and `src.core`). Discovery is explicit so setuptools
+# picks up `src.main` as well as the two subpackages.
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src", "src.*"]
+namespaces = false
+
+# Ship the stylesheet and icon alongside the code (momentum does the same).
+[tool.setuptools.package-data]
+"*" = ["*.qss", "assets/*"]

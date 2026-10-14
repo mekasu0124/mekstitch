@@ -1,0 +1,36 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+
+# This project's own venv. The top-level `.venv/` belongs to the local
+# tooling that runs this repo, so the app keeps its interpreter separate.
+.venv-fl/
+
+# Environment / secrets
+.env
+
+# Build output
+build/
+dist/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.swp
+
+# Exported charts
+*.wsjson.bak
+
+# Local tooling venv (not part of this project's build).
+# Anchored so it only ignores the top-level file, never `src/main.py`.
+/main.py
+uv.lock
