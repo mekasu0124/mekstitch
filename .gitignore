@@ -4,13 +4,10 @@ __pycache__/
 *.egg-info/
 .eggs/
 
-# Virtual environments
+# Virtual environments. The project uses a single venv, `.venv/`, which also
+# hosts the local tooling that runs this repo.
 .venv/
 venv/
-
-# This project's own venv. The top-level `.venv/` belongs to the local
-# tooling that runs this repo, so the app keeps its interpreter separate.
-.venv-fl/
 
 # Environment / secrets
 .env

@@ -29,12 +29,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Simplified the app icon wiring.** `main.py` now loads the committed PNG
   directly with `window.setWindowIcon(QPixmap(Config.APP_ICON))`, with no
   `exists()` guard or string coercion.
+- **Consolidated to a single virtualenv, `.venv`.** Both venvs carried the old
+  `winstitch-remake` absolute path in their `activate` scripts, console-script
+  shebangs and cached bytecode; these are rewritten to the new path and the
+  redundant second venv (`.venv-fl`) is dropped.
 
 ### Removed
 
 - `tools/make_icon.py` and the `tools/` directory. The icon generator was a
   one-off used to mint `src/assets/mekstitch.png`; the PNG is committed, so the
   script is dead weight.
+- The `.venv-fl` virtualenv (and its `.gitignore` entry). A single `.venv`
+  suffices; it already carried every dependency the app needs.
 
 ## [1.0.0] - 2026-10-14
 
