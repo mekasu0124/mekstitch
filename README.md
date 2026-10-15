@@ -156,6 +156,11 @@ which colour.
 
 See [CHANGELOG.md](CHANGELOG.md).
 
+## Contributing
+
+See [AGENTS.md](AGENTS.md) for the architecture, conventions and verification
+workflow.
+
 ## License
 
 MIT

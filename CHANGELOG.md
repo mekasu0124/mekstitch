@@ -19,6 +19,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Documentation set: this `CHANGELOG.md` and a rewritten `README.md` describing
   the current package layout, the `Logic` / `ProjectLogic` contract, and the
   current feature set.
+- `AGENTS.md` — contributor/agent guidance: repository layout, the layered
+  architecture and data flow, coding conventions, the Fluent Widgets gotchas,
+  the domain model, file formats and the headless verification workflow.
 
 ### Changed
 
