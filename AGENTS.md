@@ -184,7 +184,8 @@ Long work (image import, palette build) runs off the GUI thread through
 
 1. Update `CHANGELOG.md` (Keep a Changelog format) — add to `[Unreleased]`
    under Added / Changed / Fixed / Removed.
-2. Update `README.md` if the change affects layout, commands, or features.
+2. Update `README.md` if the change affects layout, commands, or features, and
+   `TUTORIAL.md` if it changes how the app is used.
 3. Verify with an offscreen smoke script covering the code path you touched
    (construct `MainWindow`, drive the operation, assert on `logic.project`).
 4. Keep the working tree free of build artefacts (`*.egg-info/`, `__pycache__/`);

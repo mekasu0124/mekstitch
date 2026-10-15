@@ -22,6 +22,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `AGENTS.md` — contributor/agent guidance: repository layout, the layered
   architecture and data flow, coding conventions, the Fluent Widgets gotchas,
   the domain model, file formats and the headless verification workflow.
+- `TUTORIAL.md` — end-user walkthrough: first chart, the drawing tools, zoom and
+  view options, craft modes, gauge, the palette, image import, export,
+  saving/undo, keyboard shortcuts, worked examples and troubleshooting.
 
 ### Changed
 

@@ -152,6 +152,11 @@ which colour.
 - Knitting: stitch-gauge asymmetry preview and intarsia vs. stranded handling
 - Import of existing image formats as a *background* trace layer
 
+## Tutorial
+
+New to mekstitch? See [TUTORIAL.md](TUTORIAL.md) for a step-by-step walkthrough
+from an empty grid to a printed chart.
+
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md).
